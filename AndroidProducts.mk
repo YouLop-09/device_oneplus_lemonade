@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_lemonade.mk
+    $(LOCAL_DIR)/havoc_lemonade.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_lemonade-user \
-    lineage_lemonade-userdebug \
-    lineage_lemonade-eng
+    havoc_lemonade-user \
+    havoc_lemonade-userdebug \
+    havoc_lemonade-eng

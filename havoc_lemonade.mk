@@ -21,10 +21,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from lemonade device
 $(call inherit-product, device/oneplus/lemonade/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Havoc-OS stuff.
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_lemonade
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1440
+
+# Device identifier. This must come after all inclusions.
+PRODUCT_NAME := havoc_lemonade
 PRODUCT_DEVICE := lemonade
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -34,7 +38,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=OnePlus9 \
-    PRODUCT_NAME=OnePlus9_EEA \
-    PRIVATE_BUILD_DESC="OnePlus9-user 11   release-keys"
-
-BUILD_FINGERPRINT := OnePlus/OnePlus9_EEA/OnePlus9:11/RKQ1.201105.002/2109102009:user/release-keys
+    PRODUCT_NAME=OnePlus9
